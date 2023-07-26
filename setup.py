@@ -1,16 +1,17 @@
 # import modules
-import sys
+# import sys
 
-class VersionError(Exception):
+# class VersionError(Exception):
 
-    def __init__(self, *args, **kwargs):
-        Exception.__init__(self, *args, **kwargs)
+#     def __init__(self, *args, **kwargs):
+#         Exception.__init__(self, *args, **kwargs)
 
-try:
-    from setuptools import find_packages, setup
-except ImportError:
-    raise("Please install setuptools to run setup.py")
+# try:
+#     from setuptools import find_packages, setup
+# except ImportError:
+#     raise ("Please install setuptools to run setup.py")
 
+from setuptools import find_packages, setup
 from typing import List
 
 
@@ -18,12 +19,14 @@ def readme():
     with open('README.md') as f:
         return f.read()
 
-def get_requirements(file_path:str)->List[str]:
-    requirements=[]
+
+def get_requirements(file_path: str) -> List[str]:
+    requirements = []
     with open(file_path) as f:
         requirements = f.readlines()
-        requirements = [req.replace("\n","") for req in requirements]
+        requirements = [req.replace("\n", "") for req in requirements]
     return requirements
+
 
 setup(
     name='LinearRegressionProject',
