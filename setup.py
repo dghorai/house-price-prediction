@@ -1,16 +1,4 @@
-# import modules
-# import sys
-
-# class VersionError(Exception):
-
-#     def __init__(self, *args, **kwargs):
-#         Exception.__init__(self, *args, **kwargs)
-
-# try:
-#     from setuptools import find_packages, setup
-# except ImportError:
-#     raise ("Please install setuptools to run setup.py")
-
+# import setuptools
 from setuptools import find_packages, setup
 from typing import List
 
@@ -31,7 +19,7 @@ def get_requirements(file_path: str) -> List[str]:
 setup(
     name='LinearRegressionProject',
     version='0.0.1',
-    description='Boston house price prediction using linear regression model',
+    description='House price prediction using linear regression model',
     author='Debabrata Ghorai, Ph.D.',
     author_email='ghoraideb@gmail.com',
     url='https://github.com/dghorai83',
