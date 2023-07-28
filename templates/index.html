@@ -31,12 +31,16 @@
   </head>
 
   <body>
-    <h1>Boston House Price Prediction</h1>
+    <h1>House Price Prediction</h1>
     <p>Model: Linear Regression</p>
     <br />
+    <p>
+      Project Repository: https://github.com/dghorai83/house-price-prediction
+    </p>
     <br />
-    <form action="form.html">
+    <br />
+    <a href="{{ url_for('predict_datapoint') }}">
       <button type="submit" class="button">Predict</button>
-    </form>
+    </a>
   </body>
 </html>
